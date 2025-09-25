@@ -1,0 +1,107 @@
+.FillOrder h1 {
+    align-items: center;
+    padding: 16px;
+}
+
+.FillOrder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.FillOrder p {
+    text-align: center;
+    padding: 12px;
+}
+
+.FillOrder span {
+    /* position: relative; */
+    top: 20px;
+    text-align: start;
+    left: -230px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.form {
+    width: 500px;
+}
+
+.form .btn {
+    width: 43%;
+    padding: 24px 42px;
+    margin-top: 14px;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    font-weight: 500;
+    border-radius: 50px;
+}
+
+.form {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0px 4px 14px #4d4d4d14;
+    max-width: 720px;
+    width: 100%;
+    padding: 30px 40px;
+    text-align: center;
+}
+
+.txt-main {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 25px;
+}
+
+.form label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+    display: block;
+    text-align: left;
+}
+
+.f-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+textarea {
+    padding: 12px 14px;
+    width: 205%;
+    height: 90px;
+    border: 1px solid #4c4c4c;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    resize: vertical;
+    transition: border 0.3s;
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border: 1px solid #4c4c4c;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #b91c1c;
+}

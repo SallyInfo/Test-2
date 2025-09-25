@@ -1,0 +1,35 @@
+/* تنسيقات أساسية لإزالة المسافات الافتراضية */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* تنسيقات الجسم والـ HTML */
+
+body,
+html {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+
+/* تنسيقات حاوية التطبيق الرئيسية */
+
+.App {
+    width: 100%;
+    overflow-x: hidden;
+    /* لمنع شريط التمرير الأفقي */
+}
+
+
+/* تنسيقات عامة للروابط */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

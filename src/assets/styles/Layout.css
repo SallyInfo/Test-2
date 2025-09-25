@@ -1,0 +1,197 @@
+/* تنسيقات الهيدر الأساسية للشاشات الكبيرة */
+
+.header-container {
+    /* border-bottom: 1px solid #ccc; */
+    box-shadow: -20px -4px 7px #111;
+    padding: 20px 0;
+    width: 100%;
+    background-color: #f6f6f6;
+    position: relative;
+    z-index: 1000;
+}
+
+.my-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.logo {
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+}
+
+.header-center {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icon {
+    font-size: 1.2em;
+    color: #333;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: #000;
+}
+
+
+/* تنسيق القائمة المنسدلة */
+
+.dropdown-link-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    min-width: 150px;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* تنسيق أيقونة السلة */
+
+.cart-icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+
+/* --- استعلامات الوسائط (Media Queries) --- */
+
+
+/* إخفاء أيقونة قائمة الجوال وزر الإغلاق على الشاشات الكبيرة */
+
+.hamburger-icon,
+.close-icon {
+    display: none;
+}
+
+
+/* عند عرض الشاشة 768px أو أقل */
+
+@media (max-width: 768px) {
+    /* إخفاء أيقونة المستخدم على الجوال */
+    .desktop-only {
+        display: none;
+    }
+    /* إظهار أيقونة القائمة الجانبية */
+    .hamburger-icon {
+        display: block;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+    /* تنسيق القائمة الرئيسية عند فتحها في وضع الجوال */
+    .header-center {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        transform: translateX(100%);
+        /* تخفي القائمة خارج الشاشة */
+        transition: transform 0.3s ease-in-out;
+        z-index: 999;
+    }
+    /* القائمة المفتوحة تظهر على الشاشة */
+    .header-center.active {
+        transform: translateX(0);
+        display: flex;
+        /* تأكد من عرضها عند التفعيل */
+    }
+    /* إظهار زر الإغلاق داخل القائمة المفتوحة */
+    .close-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 2em;
+        cursor: pointer;
+    }
+    /* تعديل تنسيقات القائمة المنسدلة على الجوال */
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        min-width: auto;
+        text-align: center;
+    }
+}

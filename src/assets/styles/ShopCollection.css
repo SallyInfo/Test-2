@@ -1,0 +1,76 @@
+.shop-collection-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.section-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.collection-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.large-item {
+    width: 700px;
+    height: 550px;
+    grid-row: span 2;
+}
+
+.collection-item-box {
+    background-color: #F3F5F7;
+    /* لون الخلفية الجديد */
+    padding: 20px;
+    /* يمكنك تعديل البادنج حسب الحاجة */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.collection-image {
+    width: 100%;
+    object-fit: contain;
+    /* للحفاظ على الصورة بالكامل داخل الصندوق */
+    display: block;
+}
+
+.item-content {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    text-align: left;
+}
+
+.item-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.item-link {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    margin-top: 5px;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.item-link:hover {
+    transform: translateX(5px);
+}
