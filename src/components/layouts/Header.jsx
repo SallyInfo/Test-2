@@ -60,9 +60,9 @@ const Header = ({ children }) => {
                     <span className="alert-text">
                     🎁 30% off storewide — Limited time!
                     </span>
-                    <a href="#" className="shop-link">
+                    <Link to="/allproducts/" className="shop-link">
                     Shop Now <FaArrowRight className="arrow-icon" />
-                    </a>
+                    </Link>
                     <button 
                     onClick={handleCloseAlert} 
                     aria-label="Close alert" 
