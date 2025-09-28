@@ -48,7 +48,7 @@ const Products = () => {
      <h1  style={{padding:"20px ",width :"250px"}}>Featured</h1>
        <div style={{position:"relative",left:"1200px",top:"-40px"}}  className="custom-pagination"></div>
        </div>
-      <div style={{padding:"30px 50px"}}>
+      <div style={{padding:"30px 20px", overflow:"hidden"}}>
         
         <Swiper
         modules={[Pagination ,Autoplay]}
