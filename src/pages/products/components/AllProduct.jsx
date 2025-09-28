@@ -1,11 +1,10 @@
 import { FaStar } from "react-icons/fa";
-import "../../assets/styles/cards.css";
-import { Link } from "react-router-dom";
+import "./../../../assets/styles/cards.css";
 
-const Card = ({ image, old_price, price, name ,discount_rate ,id}) => {
-    return (
-        <>
-            <div className="my-card bg-w">
+function Product({ image, old_price, price, name ,discount_rate}) {
+  return (
+    <>
+      <div className="my-card bg-w">
             <button className="btn3 Hot" text="Hot">Hot</button>
             <button className="btn4 discount">{discount_rate}%</button>
                 <img src={image} alt={name} className='' />
@@ -15,7 +14,7 @@ const Card = ({ image, old_price, price, name ,discount_rate ,id}) => {
                     <FaStar className="ster txt-b"/>
                     <FaStar className="ster txt-b"/>
                     <FaStar className="ster txt-b"/>
-                    <Link to={`/oneproduct/?p=${id}`} className='btn'>Add to cart</Link>
+                    <a href='/' className='btn'>Add to cart</a>
                     <p className='para'>{name}</p>
                     <div className="">
                         <span className='txt-main'>{price}$ <del className='old'>{old_price}$</del></span>
@@ -23,8 +22,8 @@ const Card = ({ image, old_price, price, name ,discount_rate ,id}) => {
                     
                 </div>
             </div>
-        </>
-    )
+    </>
+  )
 }
 
-export default Card;
+export default Product

@@ -4,13 +4,13 @@ import '../../../assets/styles/ShopCollection.css';
 const ShopCollection = () => {
   return (
     <section className="shop-collection-section">
-      <h2 className="section-title">Shop Collection</h2>
+      <h2 className="section-title ">Shop Collection</h2>
       <div className="collection-grid">
         
         {/* العنصر الكبير على اليسار */}
         <div  className="collection-item large-item">
           <div   className="collection-item-box">
-            <img style={{width:"700px "}} src="/src/assets/Images/1s-removebg-preview.png" alt="Juniors Set" className="collection-image" />
+            <img style={{width:"530px", position:"relative", top:"-50px" ,height:"600px"}} src="/src/assets/Images/1s-removebg-preview.png" alt="Juniors Set" className="collection-image" />
           </div>
           <div className="item-content">
             <h3 className="item-title">Juniors Set</h3>

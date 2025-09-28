@@ -1,42 +1,102 @@
-import React, { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaSearch, FaUser, FaShoppingBag, FaChevronDown, FaBars, FaTimes } from 'react-icons/fa'; // تم استيراد FaBars و FaTimes
-import '../../assets/styles/Layout.css';
+import { FaSearch, FaUser, FaShoppingBag, FaChevronDown, FaBars, FaTimes, FaArrowRight } from 'react-icons/fa'; 
+import '../../assets/styles/Layout.css'; 
 
-const Header = () => {
-    // حالة للتحكم في ظهور القائمة المنسدلة
+const Header = ({ children }) => { 
+    const [isAlertVisible, setIsAlertVisible] = useState(true);
+    const [isScrolled, setIsScrolled] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    // حالة جديدة للتحكم في ظهور القائمة على الجوال
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    // دالة لفتح/إغلاق القائمة المنسدلة
-    const toggleDropdown = () => {
-        setIsDropdownOpen(!isDropdownOpen);
+    useEffect(() => {
+        const handleScroll = () => {
+        const scrolled = window.scrollY > 1;
+            if (scrolled !== isScrolled) {
+                setIsScrolled(scrolled);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [isScrolled]);
+
+    const handleCloseAlert = () => {
+    setIsAlertVisible(false);
     };
 
-    // دالة لفتح/إغلاق قائمة الجوال
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
+    const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
     };
+    const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    };
+    
+    const navbarTop = isAlertVisible ? '40px' : '0'; 
+    const headerContainerClasses = `header-container ${isScrolled ? 'fixed-scrolled' : 'static-initial'}`;
+
+    let contentPaddingTop = '0px';
+
+    if (isAlertVisible) {
+
+        contentPaddingTop = '40px'; 
+    } 
+    
+    const contentStyle = {
+        paddingTop: contentPaddingTop,
+        boxSizing: 'border-box'
+    };
+
 
     return (
-        <div style={{position: "fixed"}} className="header-container">
+        <>
+
+        {isAlertVisible && (
+            <nav className='alert-header'>
+                <div className="alert-content">
+                    <span className="alert-text">
+                    🎁 30% off storewide — Limited time!
+                    </span>
+                    <a href="#" className="shop-link">
+                    Shop Now <FaArrowRight className="arrow-icon" />
+                    </a>
+                    <button 
+                    onClick={handleCloseAlert} 
+                    aria-label="Close alert" 
+                    className="close-btn"
+                    >
+                    <FaTimes /> 
+                    </button>
+                </div>
+            </nav>
+        )}
+
+        <div 
+            className={headerContainerClasses} 
+            style={{ top: navbarTop }} 
+        >
             <header className='my-header'>
                 <div className='header-left'>
                     <h3 className='logo'>3legant.</h3>
                 </div>
 
-                {/* القائمة الرئيسية: ستختفي على الجوال وتظهر بشكل جانبي */}
                 <nav className={`header-center ${isMenuOpen ? 'active' : ''}`}>
-                    <FaTimes className="close-icon" onClick={toggleMenu} /> {/* زر الإغلاق للقائمة الجانبية */}
+                    <FaTimes className="close-icon" onClick={toggleMenu} />
                     <Link className='nav-link' to="/" onClick={toggleMenu}>Home</Link>
                     
                     <div 
                         className="dropdown-link-container"
                         onMouseEnter={() => setIsDropdownOpen(true)}
                         onMouseLeave={() => setIsDropdownOpen(false)}
-                        // في وضع الجوال، يمكن استخدام onClick
-                        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                        onClick={(e) => { 
+                            if (window.innerWidth <= 768) {
+                                e.preventDefault();
+                                toggleDropdown();
+                            }
+                        }}
                     >
                         <div className="dropdown-trigger">
                             <Link className='nav-link' to="/shop">Shop</Link>
@@ -54,21 +114,26 @@ const Header = () => {
                     </div>
 
                     <Link className='nav-link' to="/contact/" onClick={toggleMenu}>Contact Us</Link>
-                    <Link className='nav-link' to="/about" onClick={toggleMenu}>About</Link>
+                    <Link className='nav-link' to="/allproducts/" onClick={toggleMenu}>Products</Link>
+                    <Link className='nav-link' to="/about/" onClick={toggleMenu}>About</Link>
                 </nav>
 
                 <div className='header-right'>
                     <FaSearch className="icon" />
-                    <FaUser className="icon desktop-only" /> {/* أيقونة المستخدم تختفي على الجوال */}
+                    <FaUser className="icon desktop-only" /> 
                     <div className="cart-icon-container">
                         <FaShoppingBag className="icon" />
                         <span className="cart-count">2</span>
                     </div>
-                    {/* أيقونة القائمة الجانبية (hamburger menu)، تظهر فقط على الجوال */}
                     <FaBars className="hamburger-icon" onClick={toggleMenu} />
                 </div>
             </header>
         </div>
+        
+        <div className="page-content-wrapper" style={contentStyle}>
+            {children}
+        </div>
+        </>
     );
 };
 

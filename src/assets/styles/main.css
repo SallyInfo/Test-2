@@ -33,3 +33,100 @@ a {
     text-decoration: none;
     color: inherit;
 }
+.f-cen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.f-bet{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+.f-evn{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+
+}
+.f-aro{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+
+}
+.f-row{
+    flex-direction: row;
+    gap: 10px;
+}
+.f-col{
+    flex-direction: column;
+    gap: 10px;
+}
+
+.p4{
+    padding: 4px 8px;
+} 
+.p6{
+    padding: 6px 12px;
+} 
+.p8{
+    padding: 8px 14px;
+} 
+.p16{
+    padding: 20px 35px;
+}
+.m-top60{
+ margin-top: 60px;
+}
+.m-bottom50{
+    margin-bottom: 50px;
+}
+
+.g2{
+    gap: 2em;
+}
+.g8{
+    gap: 8px;
+}
+.g10{
+    gap: 10px;
+}
+.g15{
+    gap: 15px;
+}
+
+.r10{
+    border-radius: 10%;
+}
+
+.r20{
+    border-radius: 20%;
+}
+
+.r30{
+    border-radius: 30%;
+}
+.r40{
+    border-radius: 40%;
+}
+.r50{
+    border-radius: 50%;
+}
+.btn{
+    background: transparent;
+    padding: 16px 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+
+}

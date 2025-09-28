@@ -1,22 +1,26 @@
-/* تنسيقات الهيدر الأساسية للشاشات الكبيرة */
-
 .header-container {
-    /* border-bottom: 1px solid #ccc; */
-    box-shadow: -20px -4px 7px #111;
-    padding: 20px 0;
-    width: 100%;
-    background-color: #f6f6f6;
     position: relative;
-    z-index: 1000;
+    width: 100%;
+    z-index: 999;
+    background-color: #f1f1f1;
+    transition: box-shadow 0.1s ease, background-color 0.1s ease;
+}
+
+.header-container.fixed-scrolled {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
 }
 
 .my-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1440px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
     position: relative;
 }
 
@@ -60,9 +64,6 @@
     color: #000;
 }
 
-
-/* تنسيق القائمة المنسدلة */
-
 .dropdown-link-container {
     position: relative;
     display: inline-block;
@@ -89,10 +90,6 @@
     z-index: 100;
 }
 
-.dropdown-menu li {
-    padding: 0;
-}
-
 .dropdown-menu a {
     color: #333;
     text-decoration: none;
@@ -104,9 +101,6 @@
 .dropdown-menu a:hover {
     background-color: #f1f1f1;
 }
-
-
-/* تنسيق أيقونة السلة */
 
 .cart-icon-container {
     position: relative;
@@ -130,33 +124,108 @@
     font-weight: bold;
 }
 
+.page-content-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+}
 
-/* --- استعلامات الوسائط (Media Queries) --- */
-
-
-/* إخفاء أيقونة قائمة الجوال وزر الإغلاق على الشاشات الكبيرة */
 
 .hamburger-icon,
 .close-icon {
     display: none;
 }
+.desktop-only {
+    display: block; 
+}
 
 
-/* عند عرض الشاشة 768px أو أقل */
+.alert-header {
+    background-color: #38c172;
+    color: white;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0 ;
+    z-index: 1000;
+    height: 40px; 
+    box-sizing: border-box;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.alert-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.alert-text {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.shop-link {
+    color: white;
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.arrow-icon {
+    margin-left: 5px;
+    font-size: 10px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0 5px;
+    line-height: 1;
+    position: absolute;
+    right: 0px;
+}
+
+
+
+@media (min-width: 768px) {
+    .my-header {
+        padding: 20px 40px; 
+        box-shadow: 0px 4px 7px #0000001a; 
+    }
+}
+
 
 @media (max-width: 768px) {
-    /* إخفاء أيقونة المستخدم على الجوال */
     .desktop-only {
         display: none;
     }
-    /* إظهار أيقونة القائمة الجانبية */
+
     .hamburger-icon {
         display: block;
         font-size: 1.5em;
         cursor: pointer;
     }
-    /* تنسيق القائمة الرئيسية عند فتحها في وضع الجوال */
+
+    .my-header {
+        padding: 15px 15px;
+    }
+
+    .header-right {
+        gap: 15px;
+    }
+
     .header-center {
+        display: flex;
         position: fixed;
         top: 0;
         right: 0;
@@ -168,30 +237,52 @@
         align-items: center;
         gap: 25px;
         transform: translateX(100%);
-        /* تخفي القائمة خارج الشاشة */
         transition: transform 0.3s ease-in-out;
-        z-index: 999;
+        z-index: 9999;
     }
-    /* القائمة المفتوحة تظهر على الشاشة */
+
     .header-center.active {
         transform: translateX(0);
-        display: flex;
-        /* تأكد من عرضها عند التفعيل */
     }
-    /* إظهار زر الإغلاق داخل القائمة المفتوحة */
+
     .close-icon {
-        display: block;
+        display: block; 
         position: absolute;
-        top: 20px;
+        padding: 1px;
+        top: 35px;
         right: 20px;
         font-size: 2em;
         cursor: pointer;
     }
-    /* تعديل تنسيقات القائمة المنسدلة على الجوال */
+
     .dropdown-menu {
         position: static;
         box-shadow: none;
         min-width: auto;
         text-align: center;
+    }
+
+    .alert-header {
+        font-size: 12px;
+        padding: 10px 15px;
+        height: auto;
+    }
+
+    .alert-content {
+        justify-content: space-between;
+    }
+    
+    .alert-text {
+        margin-right: 5px;
+    }
+
+    .close-btn {
+        position: static; 
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    .shop-link {
+        display: none;
     }
 }

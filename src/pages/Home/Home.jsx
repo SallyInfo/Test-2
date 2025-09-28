@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import HeroSection from './components/HeroSection.jsx';
 import Products from './components/Products.jsx';
 import Categories from './components/Categories.jsx';
@@ -10,6 +10,9 @@ import Gallery from './components/Gallery.jsx'
 
 
 function Home() {
+  useEffect (()=>{
+    document.title=" Home - 3legant."
+  });
   const ONE_DAY_IN_MS = 24 * 60 * 60 * 1000;
 
   return (

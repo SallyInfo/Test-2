@@ -7,8 +7,8 @@ const Form = () => {
   return (
     <>
       
-    <form action="" className="form  p16">
-      <div className="f2 f-cen f-grid">
+    <form action="" className="form ">
+      <div className="f-cen ">
 
       <div className="text">
         <label> Full Name </label>
@@ -33,12 +33,12 @@ const Form = () => {
        
         <div className="text">
         <label>city</label>
-        <input item="input" type="text"  name="" id="" />
+        <Input item="input" type="text"  name="" id="" />
         </div >
 
         <div className="Password">
         <label>zip code</label>
-        <input item="input" type="Password" name="" id="" />
+        <Input item="input" type="Password" name="" id="" />
         </div >
         
         
@@ -46,7 +46,6 @@ const Form = () => {
         <label> (optional) Additional notes </label>
         <TextArea item="taxtarea" className="p8" id="taxtarea" name="taxtarea"/>
         </div>
-        
         </div>
       <Button className="btn btn1" type="submit" text="Submit the application" />
     </form>

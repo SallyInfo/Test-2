@@ -1,7 +1,10 @@
-import React from 'react';
+import { useEffect } from 'react';
 import "../../assets/styles/About.css"
 
 const About = () => {
+  useEffect (()=>{
+      document.title=" Abut - 3legant."
+    });
   return (
     <div className="about-page-container">
       {/* القسم الرئيسي للنص والعنوان */}

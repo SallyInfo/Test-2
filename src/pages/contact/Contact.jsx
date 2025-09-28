@@ -1,7 +1,12 @@
 import Form from "../../components/common/Form";
 import "./../../assets/styles/contact.css"
+import { useEffect } from 'react';
+
 
 const FillOrder = () => {
+  useEffect (()=>{
+      document.title=" ContactUs - 3legant."
+    });
   return (
     <div id="Orders" className="FillOrder p16 f-cen f-col">
       <h1  className="p16"> Product order form </h1>
