@@ -16,7 +16,7 @@ export default function Gallery() {
         <p className="instagram-newsfeed">NEWSFEED</p>
         <h2 className="instagram-title">Instagram</h2>
         <p className="instagram-description">Follow us on social media for more discount & promotions</p>
-        <a href="https://www.instagram.com/3legant_official" className="instagram-handle">@3legant_official</a>
+        <a href="https://www.instagram.com/" className="instagram-handle">@3legant_official</a>
       </div>
 
       <div className="instagram-marquee-container">
