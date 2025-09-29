@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../../assets/styles/ShopCollection.css';
+import { Link } from 'react-router-dom';
 
 const ShopCollection = () => {
   return (
@@ -14,7 +15,7 @@ const ShopCollection = () => {
           </div>
           <div className="item-content">
             <h3 className="item-title">Juniors Set</h3>
-            <a href="#" className="item-link">Collections →</a>
+            <Link to="/allproducts/" className="item-link">Collections →</Link>
           </div>
         </div>
         
@@ -25,7 +26,7 @@ const ShopCollection = () => {
           </div>
           <div className="item-content">
             <h3 className="item-title">Men's Set</h3>
-            <a href="#" className="item-link">Collections →</a>
+            <Link to="/allproducts/" className="item-link">Collections →</Link>
           </div>
         </div>
         
@@ -36,7 +37,7 @@ const ShopCollection = () => {
           </div>
           <div className="item-content">
             <h3 className="item-title">Women's Set</h3>
-            <a href="#" className="item-link">Collections →</a>
+            <Link to="/allproducts/" className="item-link">Collections →</Link>
           </div>
         </div>
       </div>

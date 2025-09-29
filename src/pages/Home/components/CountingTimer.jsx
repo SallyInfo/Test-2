@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import '../../../assets/styles/CountingTimer.css';
+import { Link } from 'react-router-dom';
 
 const CountingTimer = ({ duration }) => {
   const [time, setTime] = useState(duration);
@@ -73,7 +74,7 @@ const CountingTimer = ({ duration }) => {
           </div>
         </div>
 
-        <button className="shop-button">Shop now</button>
+        <Link to="/allproducts/" className="shop-button">Shop now</Link>
       </div>
     </div>
   );

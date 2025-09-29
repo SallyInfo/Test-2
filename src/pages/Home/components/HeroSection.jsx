@@ -1,6 +1,6 @@
-import React from "react";
-import heroImg from "./../../../assets/Images/HeroSection.png";
+// import heroImg from "./../../../assets/Images/HeroSection.png";/
 import "../../../assets/styles/HeroSection.css"; 
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
@@ -18,10 +18,10 @@ export default function HeroSection() {
         <p className="hero-description">
           Whether you’re just starting out, have played your whole life or
           you’re a Tour pro, your swing is like a fingerprint.
-        </p>
-        <button className="hero-button">
+        </p><br /><br />
+        <Link to="/allproducts/" className="hero-button">
           Shopping Now
-        </button>
+        </Link>
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 import { FaStar } from "react-icons/fa";
 import "./../../../assets/styles/cards.css";
 
-function Product({ image, old_price, price, name ,discount_rate}) {
+function AllProduct({ image, old_price, price, name ,discount_rate}) {
   return (
     <>
       <div className="my-card bg-w">
@@ -26,4 +26,4 @@ function Product({ image, old_price, price, name ,discount_rate}) {
   )
 }
 
-export default Product
+export default AllProduct;

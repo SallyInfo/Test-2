@@ -5,22 +5,19 @@ import { getProductById } from "./../../../services/foodService";
 import Loader from "./../../../components/custom/Loader";
 
 function OneProduct() {
-  const [product, setProduct] = useState(null);
+  const [product, setProduct] = useState({});
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
-  console.log("Card props id:", id);
-
   useEffect(() => {
-    if (!id) return;
 
     async function fetchProduct() {
       setError(null);
       setLoading(true);
       try {
-        const { data } = await getProductById(id); // الكائن مباشرة
-        setProduct(data);
+        const data = await getProductById(id); 
+        setProduct(data.data);
       } catch (err) {
         console.error(err.message);
         setError(err.message);
@@ -30,7 +27,7 @@ function OneProduct() {
     }
 
     fetchProduct();
-  }, [id]);
+  });
 
   if (error) {
     return <div style={{ textAlign: "center", color: "red", padding: "20px" }}>

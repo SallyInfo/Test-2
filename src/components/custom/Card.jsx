@@ -8,14 +8,14 @@ const Card = ({ image, old_price, price, name ,discount_rate ,id}) => {
             <div className="my-card bg-w">
             <button className="btn3 Hot" text="Hot">Hot</button>
             <button className="btn4 discount">{discount_rate}%</button>
-                <img src={image} alt={name} className='' />
-                <div className='con1'>
+                <img src={image} alt={name} className='img' />
+                <div className='con1'>  
                     <FaStar className="ster txt-b"/>
                     <FaStar className="ster txt-b"/>
                     <FaStar className="ster txt-b"/>
                     <FaStar className="ster txt-b"/>
                     <FaStar className="ster txt-b"/>
-                    <Link to={`/oneproduct/?p=${id}`} className='btn'>Add to cart</Link>
+                    <Link to={'/oneproduct/' + id}  className='btn'>Add to cart</Link>
                     <p className='para'>{name}</p>
                     <div className="">
                         <span className='txt-main'>{price}$ <del className='old'>{old_price}$</del></span>

@@ -8,25 +8,26 @@ const Footer = () => {
         <footer className="main-footer">
             <div className="footer-top">
                 <div className="footer-column contact-column">
-                    <h2 className="footer-logo">3legant.</h2>
+                    <h2 className="footer-logo"><Link to="">3legant.</Link></h2>
                     <p className="footer-tagline">More than just a game.
                         <br />It’s a lifestyle.</p>
 
                     <div className="social-icons-container">
-                        <FaInstagram  />
-                        <FaFacebook />
-                        <FaYoutube />
+                        <a href="https://www.instagram.com"><FaInstagram  /></a>
+                        <a href="https://www.facebook.com/"> <FaFacebook /></a>
+                       <a href="https://www.youtube.com/"> <FaYoutube /></a>
                     </div>
                 </div>
 
                 <div className="footer-column">
                     <h3 className="column-title">Page</h3>
+
                     <ul className="footer-links">
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="/about">Shop</Link></li>
-                        <li><Link to="/products">Product</Link></li>
-                        <li><Link to="/articles">Articles</Link></li>
+                        <li><Link to="/allproducts/">Product</Link></li>
+                        <li><Link to="/allproducts">Shop</Link></li>
                         <li><Link to="/contact">Contact Us</Link></li>
+                        <li><Link to="/about">Abut</Link></li>
                     </ul>
                 </div>
 

@@ -86,6 +86,7 @@ const Header = ({ children }) => {
                 <nav className={`header-center ${isMenuOpen ? 'active' : ''}`}>
                     <FaTimes className="close-icon" onClick={toggleMenu} />
                     <Link className='nav-link' to="/" onClick={toggleMenu}>Home</Link>
+                    <Link className='nav-link' to="/allproducts/" onClick={toggleMenu}>Products</Link>
                     
                     <div 
                         className="dropdown-link-container"
@@ -99,12 +100,12 @@ const Header = ({ children }) => {
                         }}
                     >
                         <div className="dropdown-trigger">
-                            <Link className='nav-link' to="/shop">Shop</Link>
+                            <Link className='nav-link' to="/allproducts/">Shop</Link>
                             <FaChevronDown className="dropdown-icon" />
                         </div>
                         {isDropdownOpen && (
                             <ul className="dropdown-menu">
-                                <li><Link to="/shop/all" onClick={toggleMenu}>All Products</Link></li>
+                                <li><Link to="/oneproduct/1" onClick={toggleMenu}>Product</Link></li>
                                 <li><Link to="/shop/living" onClick={toggleMenu}>Living Room</Link></li>
                                 <li><Link to="/shop/bedroom" onClick={toggleMenu}>Bedroom</Link></li>
                                 <li><Link to="/shop/dining" onClick={toggleMenu}>Dining</Link></li>
@@ -114,7 +115,7 @@ const Header = ({ children }) => {
                     </div>
 
                     <Link className='nav-link' to="/contact/" onClick={toggleMenu}>Contact Us</Link>
-                    <Link className='nav-link' to="/allproducts/" onClick={toggleMenu}>Products</Link>
+                    {/* <Link className='nav-link' to="/oneproducts/" onClick={toggleMenu}>Product</Link> */}
                     <Link className='nav-link' to="/about/" onClick={toggleMenu}>About</Link>
                 </nav>
 
