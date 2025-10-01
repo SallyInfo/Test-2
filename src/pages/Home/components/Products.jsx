@@ -2,7 +2,7 @@ import "../../../assets/styles/cards.css";
 import Card from "../../../components/custom/Card.jsx";
 import { useEffect, useState } from "react";
 import { getAllProducts } from "../../../services/foodService.js";
-import Loader from "../../../components/custom/Loader.jsx";
+import FakeCard from "../../../components/custom/FakeCard.jsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -38,8 +38,21 @@ const Products = () => {
     return error
   }
 
-  if (loading) {
-    return <Loader />;
+   if(loading){
+    return(
+      <>
+      <div className="f-cen g10 p16">
+      {
+        <>
+        <FakeCard/>
+        <FakeCard/>
+        <FakeCard/>
+        <FakeCard/>
+        </>
+      }
+      </div>
+      </>
+    );
   }
 
   return (
@@ -87,6 +100,7 @@ const Products = () => {
           product.map((product, index) => (
             <SwiperSlide key={index}>
             <Card
+            id={product.id}
             discount_rate={product.discount_rate}
             image={product.image}
             name={product.name}

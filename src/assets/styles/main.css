@@ -1,13 +1,9 @@
-/* تنسيقات أساسية لإزالة المسافات الافتراضية */
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-
-/* تنسيقات الجسم والـ HTML */
 
 body,
 html {
@@ -17,17 +13,11 @@ html {
     background-color: #f9f9f9;
 }
 
-
-/* تنسيقات حاوية التطبيق الرئيسية */
-
 .App {
     width: 100%;
     overflow-x: hidden;
-    /* لمنع شريط التمرير الأفقي */
 }
 
-
-/* تنسيقات عامة للروابط */
 
 a {
     text-decoration: none;
@@ -120,7 +110,7 @@ a {
     border-radius: 50%;
 }
 .btn{
-    background: transparent;
+    background: #060606;
     padding: 16px 18px;
     border: none;
     outline: none;
@@ -128,5 +118,51 @@ a {
     color: #fff;
     font-weight: 600;
     font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+.btn:hover{
+    background-color: #26a560;
+}
 
+.search-overlay-backdrop {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh; 
+  background-color: #00180872; 
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+
+.search-modal-content {
+  background-color: #fff; 
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; 
 }

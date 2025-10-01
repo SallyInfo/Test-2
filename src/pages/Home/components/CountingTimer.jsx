@@ -45,13 +45,13 @@ const CountingTimer = ({ duration }) => {
 
   return (
     <div s className="full-promo-container">
-      {/* القسم الخاص بالصورة */}
+
       <div className="image-section">
         <img src="src/assets/Images/image.png" alt="Golf equipment" className="golf-promo-image" />
       </div>
 
-      {/* القسم الخاص بالمحتوى */}
-      <div className="timer-section-container">
+
+      <div className="timer-section-container" style={{background:"#001003ff"}}>
         <div className="text-container">
           <span className="limited-edition-text">LIMITED EDITION</span>
           <h2 className="title-text">Hurry up! 30% OFF</h2>

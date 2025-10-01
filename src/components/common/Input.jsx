@@ -5,7 +5,7 @@ const Input = (props) => {
       <>
     <div className="inputBox">
       <label htmlFor={props.name}>{props.value}</label>
-      <input type={props.type}  name={props.name} id={props.name} required />
+      <input type={props.type}  name={props.name} placeholder={props.plac} id={props.name} required />
     </div>
     </>
     )
@@ -15,7 +15,7 @@ const Input = (props) => {
       <>
     <div className="inputBox">
       <label htmlFor={props.name}>{props.value}</label>
-      <textarea name={props.name} id={props.name} required  rows={4}></textarea>
+      <input type="checkbox" name={props.name} id={props.name} required />
     </div>
     </>
     )

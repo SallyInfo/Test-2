@@ -1,5 +1,3 @@
-/* تنسيقات الشاشات الكبيرة (الافتراضية) */
-
 .main-footer {
     background-color: #000;
     color: white;
@@ -108,52 +106,37 @@
     width: auto;
 }
 
-
-/* --- استعلامات الوسائط لجعل التصميم متجاوباً --- */
-
-
-/* هذا الجزء هو الأهم لجعل التصميم يعمل على الشاشات الأصغر */
-
-
-/* عند عرض الشاشة 768px أو أقل (لأجهزة التابلت) */
-
 @media (max-width: 768px) {
     .footer-top {
         flex-direction: column;
-        /* يجعل الأعمدة تترتب عمودياً */
         gap: 40px;
-        /* يزيد المسافة بين الأعمدة المكدسة */
     }
     .footer-bottom {
         flex-direction: column;
-        /* يجعل عناصر الجزء السفلي تترتب عمودياً */
+
         gap: 20px;
         text-align: center;
-        /* يوسط النص في الجزء السفلي */
+
     }
     .policy-links {
         justify-content: center;
-        /* يوسط روابط السياسات */
+
     }
     .payment-icons {
         justify-content: center;
-        /* يوسط أيقونات الدفع */
+
     }
     .footer-logo,
     .footer-tagline,
     .column-title,
     .footer-links {
         text-align: center;
-        /* يوسط كل العناوين والقوائم */
+
     }
 }
-
-
-/* عند عرض الشاشة 480px أو أقل (لأجهزة الجوال) */
 
 @media (max-width: 480px) {
     .main-footer {
         padding: 30px 15px;
-        /* يقلل الهوامش على الجوال */
     }
 }

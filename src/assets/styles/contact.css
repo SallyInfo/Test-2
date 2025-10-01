@@ -80,7 +80,7 @@ textarea {
     padding: 12px 14px;
     width: 210%;
     height: 90px;
-    border: 1px solid #4c4c4c;
+    border: 1px solid #a3a3a3;
     border-radius: 8px;
     font-size: 15px;
     outline: none;
@@ -96,8 +96,7 @@ input {
     width: 100%;
     padding: 12px 14px;
     border: none;
-    border: 1px solid #4c4c4c;
-    border-radius: 10px;
+    border: 1px solid #636363;
     font-size: 15px;
     outline: none;
     transition: border 0.3s;

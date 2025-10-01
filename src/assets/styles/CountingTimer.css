@@ -1,19 +1,13 @@
 .full-promo-container {
     display: flex;
     flex-wrap: wrap;
-    /* يسمح للعناصر بالنزول إلى سطر جديد */
     width: 100%;
     overflow: hidden;
 }
 
-
-/* --- تنسيقات قسم الصورة --- */
-
 .image-section {
     width: 60%;
-    /* يصبح 60% من العرض على الشاشات الكبيرة */
     height: 532px;
-    /* الحفاظ على الارتفاع على الشاشات الكبيرة */
     overflow: hidden;
 }
 
@@ -23,9 +17,6 @@
     object-fit: cover;
 }
 
-
-/* --- تنسيقات قسم المحتوى (العداد والنصوص) --- */
-
 .timer-section-container {
     display: flex;
     flex-direction: column;
@@ -34,10 +25,8 @@
     background-color: #000;
     color: white;
     padding: 50px;
-    /* زيادة المساحة الداخلية */
     width: 40%;
-    /* يصبح 40% من العرض على الشاشات الكبيرة */
-    height: 532px;
+    /* height: 532px; */
     box-sizing: border-box;
 }
 
@@ -108,18 +97,15 @@
 }
 
 
-/* --- Media Queries للشاشات الصغيرة والمتوسطة --- */
 
 @media (max-width: 1200px) {
     .image-section {
         width: 50%;
-        /* تقليل عرض الصورة */
+
         height: auto;
-        /* السماح بتغير الارتفاع */
     }
     .timer-section-container {
         width: 50%;
-        /* زيادة عرض المحتوى */
         height: auto;
     }
 }
@@ -127,18 +113,18 @@
 @media (max-width: 768px) {
     .full-promo-container {
         flex-direction: column;
-        /* جعل العناصر تتكدس فوق بعضها */
+
     }
     .image-section,
     .timer-section-container {
         width: 100%;
-        /* جعل كل قسم يأخذ عرض الشاشة بالكامل */
+
         height: auto;
-        /* تقليل المساحة الداخلية */
+
     }
     .timer-section-container {
         align-items: center;
-        /* توسيط المحتوى */
+
         text-align: center;
     }
     .text-container {

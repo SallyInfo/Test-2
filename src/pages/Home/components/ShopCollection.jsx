@@ -8,7 +8,7 @@ const ShopCollection = () => {
       <h2 className="section-title ">Shop Collection</h2>
       <div className="collection-grid">
         
-        {/* العنصر الكبير على اليسار */}
+
         <div  className="collection-item large-item">
           <div   className="collection-item-box">
             <img style={{width:"530px", position:"relative", top:"-50px" ,height:"600px"}} src="/src/assets/Images/1s-removebg-preview.png" alt="Juniors Set" className="collection-image" />
@@ -19,7 +19,7 @@ const ShopCollection = () => {
           </div>
         </div>
         
-        {/* العنصر الأول على اليمين */}
+
         <div className="collection-item small-item">
           <div className="collection-item-box">
             <img src="/src/assets/Images/2s-removebg-preview.png" alt="Men's Set" className="collection-image" />
@@ -30,7 +30,7 @@ const ShopCollection = () => {
           </div>
         </div>
         
-        {/* العنصر الثاني على اليمين */}
+
         <div className="collection-item small-item">
           <div className="collection-item-box">
             <img src="/src/assets/Images/3s-removebg-preview.png" alt="Women's Set" className="collection-image" />

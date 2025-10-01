@@ -1,7 +1,8 @@
 import AllProduct from "./components/AllProduct";
 import { useEffect,useState } from "react";
 import { getAllProducts } from "./../../services/foodService"
-import Loader from "../../components/custom/Loader";
+// import Loader from "../../components/custom/Loader"; 
+import FakeCard from "./../../components/custom/FakeCard";
 
 
 function AllProducts() {
@@ -34,8 +35,28 @@ function AllProducts() {
     return error
   }
 
-  if (loading) {
-    return <Loader />;
+  if(loading){
+    return(
+      <>
+      <div className="f-cen g10 p8">
+      {
+        <>
+        <FakeCard/>
+        <FakeCard/>
+        <FakeCard/>
+        <FakeCard/>
+        <FakeCard/>
+        <FakeCard/>
+        <FakeCard/>
+        <FakeCard/>
+        <FakeCard/>
+        <FakeCard/>
+        </>
+      }
+
+      </div>
+      </>
+    );
   }
   return (
     <>

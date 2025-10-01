@@ -1,7 +1,6 @@
-// src/main.jsx (أو src/index.jsx)
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.jsx'; // تأكد أن المسار هنا يشير إلى App.jsx
+import App from './App.jsx';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 

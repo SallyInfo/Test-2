@@ -43,9 +43,9 @@
     width: 550px;
     height: 250px;
      background-color: #F3F5F7;
-    /* لون الخلفية الجديد */
+
     padding: 20px;
-    /* يمكنك تعديل البادنج حسب الحاجة */
+ 
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -56,7 +56,7 @@
     width: 400px;
     height: 200px;
     object-fit: contain;
-    /* للحفاظ على الصورة بالكامل داخل الصندوق */
+
     display: block;
 }
 

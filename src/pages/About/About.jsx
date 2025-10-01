@@ -7,14 +7,14 @@ const About = () => {
     });
   return (
     <div className="about-page-container">
-      {/* القسم الرئيسي للنص والعنوان */}
+
       <div className="about-text-content">
         <h2 className="main-title">About store</h2>
         <p className="main-subtitle">Discover our store story, values and mission.</p>
         
-        {/* القسم الفرعي للنص والصورة */}
+
         <div className="two-column-layout">
-          {/* عمود النص */}
+
           <div className="text-column">
             <h3 className="story-title">Our story</h3>
             <p>
@@ -36,12 +36,9 @@ const About = () => {
               to quality and elegance.
             </p>
           </div>
-          {/* عمود الصورة */}
+
           <div className="image-column">
-            {/*
-              تأكد أن هذه الصورة موجودة في مجلد public
-              باسم golf-equipment.jpg أو أي اسم تختاره
-            */}
+
             <img src="src/assets/Images/image.png" alt="Golf equipment and glove" className="about-image" />
           </div>
         </div>
