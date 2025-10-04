@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import "../../assets/styles/About.css"
+import Abut from "./../../assets/Images/image.png"
 
 const About = () => {
   useEffect (()=>{
@@ -38,8 +39,7 @@ const About = () => {
           </div>
 
           <div className="image-column">
-
-            <img src="src/assets/Images/image.png" alt="Golf equipment and glove" className="about-image" />
+            <img src={Abut} alt="Golf equipment and glove" className="about-image" />
           </div>
         </div>
       </div>

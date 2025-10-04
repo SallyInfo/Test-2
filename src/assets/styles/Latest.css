@@ -62,3 +62,62 @@
 .read-more-link:hover {
     color: #000;
 }
+.nav-link:hover {
+    color: #25ba00;
+    
+}
+@media (max-width: 768px) {
+    .latest-articles-section {
+        padding: 30px 15px;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .section-title {
+        font-size: 2em;
+    }
+    
+    .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .article-image-container {
+        height: 200px;
+    }
+    
+    .article-content {
+        padding: 15px;
+    }
+    
+    .article-title {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .latest-articles-section {
+        padding: 20px 10px;
+    }
+    
+    .section-title {
+        font-size: 1.8em;
+    }
+    
+    .article-image-container {
+        height: 180px;
+    }
+    
+    .article-content {
+        padding: 12px;
+    }
+    
+    .article-title {
+        font-size: 1.1em;
+    }
+}

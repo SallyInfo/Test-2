@@ -3,6 +3,10 @@ import '../../../assets/styles/Newsletter.css';
 import Button from "./../../../components/common/Button";
 
 export default function NewsletterSection() {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    };
+
     return (
         <section className="newsletter-wrapper">
             <div className="newsletter-content">
@@ -27,14 +31,22 @@ export default function NewsletterSection() {
                             <rect x="2" y="4" width="20" height="16" rx="2"></rect>
                             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                         </svg>
-                        <form action="">
-                        <input
-                            type="email"
-                            placeholder="Email address"
-                            className="email-input"
+                        <form className="newsletter-form" onSubmit={handleSubmit}>
+                            <input
+                                type="email"
+                                placeholder="Email address"
+                                className="email-input"
+                                required
                             />
-                            <Button className="btn" styletype="signup-button" type="submit" text="Signup">Signup</Button>
-                            </form>
+                            <Button 
+                                className="signup-button" 
+                                styletype="signup-button" 
+                                type="submit" 
+                                text="Signup"
+                            >
+                                Signup
+                            </Button>
+                        </form>
                     </div>
                 </div>
             </div>

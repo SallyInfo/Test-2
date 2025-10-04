@@ -10,12 +10,10 @@ import Login from './pages/login/Login.jsx';
 import Signin from './pages/login/Signin.jsx';
 import "./assets/styles/Layout.css";
 import '../src/assets/styles/main.css';
-// import ScrollUp from "././components/custom/ScrollUp.jsx";
 
 function App() {
   return (
   <>
-            {/* <ScrollUp />   */}
     <Routes>
       <Route element={<AuthLayouts />}>
             <Route path="/sign-in" element={<Signin />} />

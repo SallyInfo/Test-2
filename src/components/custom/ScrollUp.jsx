@@ -4,13 +4,9 @@ import { useEffect } from "react";
 function ScrollUp() {
     const { pathname } = useLocation();
 
-    useEffect(()=>{
-        window.screenTop({
-          top:0,
-          behavior:"smooth"
-        });
-
-    },[pathname]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return null;
 }
