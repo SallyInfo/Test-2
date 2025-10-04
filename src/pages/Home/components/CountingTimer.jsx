@@ -51,7 +51,7 @@ const CountingTimer = ({ duration }) => {
       </div>
 
 
-      <div className="timer-section-container" style={{background:"#001003ff"}}>
+      <div className="timer-section-container" style={{ background: "#001003ff" }}>
         <div className="text-container">
           <span className="limited-edition-text">LIMITED EDITION</span>
           <h2 className="title-text">Hurry up! 30% OFF</h2>

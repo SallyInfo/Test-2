@@ -38,10 +38,10 @@ export default function NewsletterSection() {
                                 className="email-input"
                                 required
                             />
-                            <Button 
-                                className="signup-button" 
-                                styletype="signup-button" 
-                                type="submit" 
+                            <Button
+                                className="signup-button"
+                                styletype="signup-button"
+                                type="submit"
                                 text="Signup"
                             >
                                 Signup

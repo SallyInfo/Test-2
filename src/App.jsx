@@ -13,26 +13,26 @@ import '../src/assets/styles/main.css';
 
 function App() {
   return (
-  <>
-    <Routes>
-      <Route element={<AuthLayouts />}>
-            <Route path="/sign-in" element={<Signin />} />
-            <Route path="/login" element={<Login />} /> 
-      </Route>
-      
-          <Route element={<MainLayout />}>
-            <Route path='/' element={<Home />} />
-            <Route path='/about/' element={<About />} />
-            <Route path='/contact/' element={<Contact />} />
-            <Route path='/allproducts/' element={<AllProducts/>} />
-            <Route path="/oneproduct/:id" element={<OneProduct />} />
+    <>
+      <Routes>
+        <Route element={<AuthLayouts />}>
+          <Route path="/sign-in" element={<Signin />} />
+          <Route path="/login" element={<Login />} />
+        </Route>
 
-             <Route path="*" element={<h1 className='f-cen p16' style={{color:"red"}}>404 Page Not Found</h1>} />
-          </Route>
+        <Route element={<MainLayout />}>
+          <Route path='/' element={<Home />} />
+          <Route path='/about/' element={<About />} />
+          <Route path='/contact/' element={<Contact />} />
+          <Route path='/allproducts/' element={<AllProducts />} />
+          <Route path="/oneproduct/:id" element={<OneProduct />} />
 
-        </Routes>
+          <Route path="*" element={<h1 className='f-cen p16' style={{ color: "red" }}>404 Page Not Found</h1>} />
+        </Route>
+
+      </Routes>
     </>
-    
+
   );
 }
 

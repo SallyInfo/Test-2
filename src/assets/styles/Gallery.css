@@ -1,59 +1,58 @@
 .instagram-section {
-    padding: 4rem 0;
-    padding-bottom: 0;
-    text-align: center;
+  padding: 4rem 0;
+  padding-bottom: 0;
+  text-align: center;
 }
 
 .instagram-header {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .instagram-newsfeed {
-    color: #999;
-    font-size: 0.875rem;
-    font-weight: 500;
+  color: #999;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 .instagram-title {
-    font-size: 2.5rem;
-    font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 .instagram-description {
-    color: #555;
-    margin-top: 0.5rem;
+  color: #555;
+  margin-top: 0.5rem;
 }
 
 .instagram-handle {
-    display: block;
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 1rem;
+  display: block;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
 }
 
 .instagram-marquee-container {
-    overflow: hidden;
-    white-space: nowrap;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .instagram-marquee-content {
-    display: inline-block;
-    animation: marquee-animation 15s linear infinite;
+  display: inline-block;
+  animation: marquee-animation 15s linear infinite;
 }
 
 .instagram-image {
-    height: 250px;
-    /* margin: 0 10px;  */
-    object-fit: cover;
-    display: inline-block;
+  height: 250px;
+  object-fit: cover;
+  display: inline-block;
 }
 
 @keyframes marquee-animation {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

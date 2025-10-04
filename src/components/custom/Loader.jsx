@@ -3,7 +3,7 @@
 const Loader = () => {
     return (
         <>
-                {/* <ul className="f-cen">
+            {/* <ul className="f-cen">
                     <li></li>
                     <li></li>
                     <li></li>

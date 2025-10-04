@@ -11,7 +11,7 @@ export default function LatestArticles() {
     },
     {
       id: 2,
-      image: 'src/assets/Images/2l.png', 
+      image: 'src/assets/Images/2l.png',
       title: 'The timeless classics on the green',
       link: '/allproducts/',
     },

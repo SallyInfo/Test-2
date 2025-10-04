@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaInstagram, FaFacebook, FaYoutube } from 'react-icons/fa';
-import '../../assets/styles/Footer.css'; // تأكد من أن هذا المسار صحيح
+import '../../assets/styles/Footer.css';
 
 const Footer = () => {
     return (
@@ -13,9 +13,9 @@ const Footer = () => {
                         <br />It’s a lifestyle.</p>
 
                     <div className="social-icons-container">
-                        <a href="https://www.instagram.com"><FaInstagram  /></a>
+                        <a href="https://www.instagram.com"><FaInstagram /></a>
                         <a href="https://www.facebook.com/"> <FaFacebook /></a>
-                       <a href="https://www.youtube.com/"> <FaYoutube /></a>
+                        <a href="https://www.youtube.com/"> <FaYoutube /></a>
                     </div>
                 </div>
 

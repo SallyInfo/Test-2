@@ -3,23 +3,23 @@ import "../../assets/styles/About.css"
 import Abut from "./../../assets/Images/image.png"
 
 const About = () => {
-  useEffect (()=>{
-      document.title=" Abut - 3legant."
-    });
+  useEffect(() => {
+    document.title = " Abut - 3legant."
+  });
   return (
     <div className="about-page-container">
 
       <div className="about-text-content">
         <h2 className="main-title">About store</h2>
         <p className="main-subtitle">Discover our store story, values and mission.</p>
-        
+
 
         <div className="two-column-layout">
 
           <div className="text-column">
             <h3 className="story-title">Our story</h3>
             <p>
-              Siegant was founded in 2015 with a clear mission: to provide the 
+              Siegant was founded in 2015 with a clear mission: to provide the
               best golf equipment and supplies for enthusiasts of this
               elegant sport. We began with a vision that golf is not just a sport,
               but a lifestyle that reflects elegance, precision, and dedication.

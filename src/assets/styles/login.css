@@ -1,6 +1,6 @@
 .sign-up-container {
   display: flex;
-  min-height: 100vh; 
+  min-height: 100vh;
   background-color: #fff;
   padding: 0;
 }
@@ -70,7 +70,7 @@ input {
   color: #aaa;
   cursor: pointer;
 }
-.eye2{
+.eye2 {
   position: absolute;
   right: 80px;
   top: 52%;
@@ -184,15 +184,14 @@ input {
     cursor: pointer;
   }
 
-    .eye2{
+  .eye2 {
     position: absolute;
     right: 255px;
     top: 52%;
     transform: translateY(-50%);
     color: #aaa;
     cursor: pointer;
-    }
-    
+  }
 }
 @media (max-width: 555px) {
   .eye-icon {
@@ -203,7 +202,7 @@ input {
     color: #aaa;
     cursor: pointer;
   }
-  .eye2{
+  .eye2 {
     position: absolute;
     right: 53px;
     top: 52%;

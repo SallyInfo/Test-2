@@ -10,23 +10,22 @@ import Gallery from './components/Gallery.jsx'
 
 
 function Home() {
-  useEffect (()=>{
-    document.title=" Home - 3legant."
+  useEffect(() => {
+    document.title = " Home - 3legant."
   });
   const ONE_DAY_IN_MS = 24 * 60 * 60 * 1000;
 
   return (
-  
+
     <div className="home-container">
       <HeroSection />
-      <Products/>
+      <Products />
       <Categories />
       <CountingTimer duration={ONE_DAY_IN_MS} />
-      <ShopCollection/>
-      
-      <Latest/>
-      <Newsletter/>
-      <Gallery/>
+      <ShopCollection />
+      <Latest />
+      <Newsletter />
+      <Gallery />
 
     </div>
   );

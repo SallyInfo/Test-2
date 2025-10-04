@@ -11,7 +11,7 @@ import image5 from '../../../assets/Images/5.jpg';
 export default function Gallery() {
   return (
     <section className="instagram-section">
-      
+
       <div className="instagram-header">
         <p className="instagram-newsfeed">NEWSFEED</p>
         <h2 className="instagram-title">Instagram</h2>
@@ -21,14 +21,14 @@ export default function Gallery() {
 
       <div className="instagram-marquee-container">
         <div className="instagram-marquee-content">
-    
+
           <img src={image1} alt="صورة غولف 1" className="instagram-image" />
           <img src={image2} alt="صورة غولف 2" className="instagram-image" />
           <img src={image3} alt="صورة غولف 3" className="instagram-image" />
           <img src={image4} alt="صورة غولف 4" className="instagram-image" />
           <img src={image5} alt="صورة غولف 5" className="instagram-image" />
-          
-   
+
+
           <img src={image1} alt="صورة غولف 1" className="instagram-image" />
           <img src={image2} alt="صورة غولف 2" className="instagram-image" />
           <img src={image3} alt="صورة غولف 3" className="instagram-image" />

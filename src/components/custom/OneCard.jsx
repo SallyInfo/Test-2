@@ -2,7 +2,7 @@
 import "../../assets/styles/cards.css";
 import { Link } from "react-router-dom";
 
-const Card = ({ image, old_price, price, name ,discount_rate ,id }) => {
+const Card = ({ image, old_price, price, name, discount_rate, id }) => {
     return (
         <>
             <div className="one-card bg-w">

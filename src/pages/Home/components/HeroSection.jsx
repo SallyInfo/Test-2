@@ -1,14 +1,14 @@
 // import heroImg from "./../../../assets/Images/HeroSection.png";/
-import "../../../assets/styles/HeroSection.css"; 
+import "../../../assets/styles/HeroSection.css";
 import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
     <section className="hero-section">
-    
+
       <div className="overlay"></div>
 
-    
+
       <div className="hero-content">
         <h1 className="hero-title">
           More than <br />

@@ -1,153 +1,135 @@
 .hero-section {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    min-height: 110vh;
-    background-image: url('src/assets/Images/HeroSection.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: left;
-    padding-left: 172px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 110vh;
+  background-image: url("src/assets/Images/HeroSection.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: left;
+  padding-left: 172px;
 }
 
 .overlay {
-    display: none;
+  display: none;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 10;
-    max-width: 45rem;
-    padding: 0;
-    margin-bottom: 80px;
-
+  position: relative;
+  z-index: 10;
+  max-width: 45rem;
+  padding: 0;
+  margin-bottom: 80px;
 }
 
 .hero-title {
-    color: white;
-    font-size: 5rem;
-    line-height: 1.25;
-    font-weight: 700;
+  color: white;
+  font-size: 5rem;
+  line-height: 1.25;
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {
-    .hero-title {
-        font-size: 5.5rem;
-    }
+  .hero-title {
+    font-size: 5.5rem;
+  }
 }
 
 .hero-description {
-    color: #D1D5DB;
-    margin-top: 16px;
-    margin-bottom: 18px;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    max-width: 30rem;
+  color: #d1d5db;
+  margin-top: 16px;
+  margin-bottom: 18px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  max-width: 30rem;
 }
 
 .hero-button {
-    /* margin-top: 32px; */
-    padding: 0.8rem 2.5rem;
-    background-color: #2ED47C;
-    color: white;
-    font-weight: 600;
-    border-radius: 0.375rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  padding: 0.8rem 2.5rem;
+  background-color: #2ed47c;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .hero-button:hover {
-    background-color: #26a560;
+  background-color: #26a560;
 }
-/* التنسيقات الحالية لقسم البطل */
+
 .hero-section {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    min-height: 110vh;
-    background-image: url('src/assets/Images/HeroSection.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: left;
-    padding-left: 172px; /* هذا سيتم إلغاؤه في الشاشات الأصغر */
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 110vh;
+  background-image: url("src/assets/Images/HeroSection.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: left;
+  padding-left: 172px;
 }
 
-/* في الشاشات الصغيرة (مثل الهواتف المحمولة) */
 @media (max-width: 768px) {
-    .hero-section {
-        /* قلل الارتفاع ليتناسب مع شاشة الهاتف */
-        min-height: 90vh; 
-        /* قم بإزالة المسافة البادئة الكبيرة */
-        padding-left: 0; 
-        /* اجعل المحتوى يتوسط القسم */
-        justify-content: center; 
-        /* تأكد من أن الخلفية تغطي المساحة بالكامل */
-        background-position: 50% 0; /* يمكنك تعديل هذه القيمة لتركيز الصورة في الأعلى */
-    }
+  .hero-section {
+    min-height: 90vh;
+    padding-left: 0;
+    justify-content: center;
+    background-position: 50% 0;
+  }
 
-    /* لعرض تداخل خفيف على الصورة لزيادة وضوح النص */
-    .overlay {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        /* تداخل (Overlay) أسود شبه شفاف */
-        background-color: rgba(0, 0, 0, 0.4); 
-        z-index: 5;
-    }
+  .overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 5;
+  }
 
-    .hero-content {
-        /* اجعل المحتوى يمتد بعرض الشاشة مع مسافات بادئة جانبية */
-        max-width: 90%; 
-        padding: 23px;
-        /* توسيط المحتوى الأفقي */
-        text-align: center; 
-        /* زيادة المسافة من الأعلى قليلاً في الجوال */
-        margin-bottom: -60px; 
-    }
+  .hero-content {
+    max-width: 90%;
+    padding: 23px;
+    text-align: center;
+    margin-bottom: -60px;
+  }
 
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 768px) {
     .hero-title {
-        /* تقليل حجم الخط بشكل كبير ليناسب شاشة الهاتف */
-        font-size: 2.5rem; 
-        line-height: 1.2;
+      font-size: 2.5rem;
     }
-    
-    /* إلغاء استعلام الوسائط السابق ليتفوق عليه استعلام max-width */
-    @media (min-width: 768px) {
-        .hero-title {
-            font-size: 2.5rem; /* التأكد من أن التنسيق الصغير هو المطبق */
-        }
-    }
-    
-    .hero-description {
-        /* تقليل حجم الخط على الهاتف */
-        font-size: 1rem; 
-        /* توسيط الوصف وجعل عرضه يمتد ليناسب الشاشة */
-        max-width: 100%; 
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    /* إخفاء فواصل الأسطر <br /> الإضافية في React/JSX في شاشات الجوال */
-    .hero-content br {
-        display: none;
-    }
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-content br {
+    display: none;
+  }
 }
 
-/* تنسيق إضافي للأجهزة اللوحية (Tablets) بين 769px و 1024px */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .hero-section {
-        padding-left: 50px; /* مسافة بادئة أقل من العرض الكامل */
-    }
+  .hero-section {
+    padding-left: 50px;
+  }
 
-    .hero-title {
-        font-size: 4rem;
-    }
+  .hero-title {
+    font-size: 4rem;
+  }
 }
