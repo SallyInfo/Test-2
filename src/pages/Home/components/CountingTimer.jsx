@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import '../../../assets/styles/CountingTimer.css';
 import { Link } from 'react-router-dom';
+import timer from "../../../../public/image.png";
 
 const CountingTimer = ({ duration }) => {
   const [time, setTime] = useState(duration);
@@ -47,7 +48,7 @@ const CountingTimer = ({ duration }) => {
     <div s className="full-promo-container">
 
       <div className="image-section">
-        <img src="src/assets/Images/image.png" alt="Golf equipment" className="golf-promo-image" />
+        <img src={timer} alt="Golf equipment" className="golf-promo-image" />
       </div>
 
 

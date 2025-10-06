@@ -1,11 +1,11 @@
 
 import '../../../assets/styles/Gallery.css';
 
-import image1 from '../../../assets/Images/1.jpg';
-import image2 from '../../../assets/Images/2.jpg';
-import image3 from '../../../assets/Images/3.jpg';
-import image4 from '../../../assets/Images/4.jpg';
-import image5 from '../../../assets/Images/5.jpg';
+import image1 from '../../../../public/1.jpg';
+import image2 from '../../../../public/2.jpg';
+import image3 from '../../../../public/3.jpg';
+import image4 from '../../../../public/4.jpg';
+import image5 from '../../../../public/5.jpg';
 
 
 export default function Gallery() {

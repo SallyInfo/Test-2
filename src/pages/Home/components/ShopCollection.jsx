@@ -11,7 +11,7 @@ const ShopCollection = () => {
         <div className="collection-item large-item">
           <div className="collection-item-box">
             <img
-              src="/src/assets/Images/1s-removebg-preview.png"
+              src="../../../../public/1s-removebg-preview.png"
               alt="Juniors Set"
               className="collection-image"
             />
@@ -25,7 +25,7 @@ const ShopCollection = () => {
         <div className="collection-item small-item">
           <div className="collection-item-box">
             <img
-              src="/src/assets/Images/2s-removebg-preview.png"
+              src="../../../../public/2s-removebg-preview.png"
               alt="Men's Set"
               className="collection-image"
             />
@@ -39,7 +39,7 @@ const ShopCollection = () => {
         <div className="collection-item small-item">
           <div className="collection-item-box">
             <img
-              src="/src/assets/Images/3s-removebg-preview.png"
+              src="../../../../public/3s-removebg-preview.png"
               alt="Women's Set"
               className="collection-image"
             />

@@ -58,7 +58,7 @@ function OneProduct() {
 
   return (
     <>
-      <h1 style={{ padding: "20px", width: "100%", textAlign: "center" }}>product</h1>
+      <h1 style={{ padding: "50px", width: "100%", textAlign: "center" }}>Product</h1>
       <div className="f-cen p16">
         <OneCard key={product.id} id={product.id} image={product.image} />
         <div className="product p16 one-card">

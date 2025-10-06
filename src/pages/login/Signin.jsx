@@ -1,4 +1,4 @@
-import LoginImg from "./../../assets/Images/2.jpg";
+import LoginImg from "../../../public/2.jpg";
 import Input from '../../components/common/Input';
 import Button from "../../components/common/Button";
 import "./../../assets/styles/login.css";

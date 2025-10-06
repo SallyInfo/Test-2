@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import "../../assets/styles/About.css"
-import Abut from "./../../assets/Images/image.png"
+import Abut from "../../../public/image.png"
 
 const About = () => {
   useEffect(() => {
